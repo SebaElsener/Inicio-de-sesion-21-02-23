@@ -87,7 +87,7 @@ io.on('connection', async socket => {
     })
 })
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 const connectedServer = httpServer.listen(PORT, function () {
     console.log(`Servidor Http con Websockets escuchando en el puerto ${connectedServer.address().port}`)
 })
